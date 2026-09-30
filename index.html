@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademiaPulse AI Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="layout-container">
+
+    <!-- ================= NAVIGATION DRAWER ================= -->
+
+    <aside class="nav-drawer">
+
+        <div class="brand-container">
+            <div class="brand-icon">A</div>
+            <div>
+                <h2>AcademiaPulse</h2>
+                <span>AI Learning Studio</span>
+            </div>
+        </div>
+
+        <button id="homeBtn" class="home-action-btn">
+            ⌂ &nbsp; Dashboard (10 Tasks)
+        </button>
+
+        <div class="nav-section-title">TASKS</div>
+
+        <div id="taskNavigation" class="nav-item-list">
+            <!-- Dynamic task navigation -->
+        </div>
+
+        <!-- ================= CONFIGURATION CARD ================= -->
+
+        <div class="config-card">
+
+            <h3>Gemini AI Settings</h3>
+
+            <p>Enter your Gemini API key below to enable workspace features.</p>
+
+            <input
+                type="password"
+                id="apiKeyInput"
+                placeholder="Enter Gemini API Key"
+            >
+
+            <div class="action-row">
+                <button id="saveKeyBtn" class="primary-btn">Save Key</button>
+                <button id="clearKeyBtn" class="secondary-btn">Reset</button>
+            </div>
+
+            <div id="keyStatus" class="status-indicator">
+                API key not configured
+            </div>
+
+            <!-- MODEL SELECT -->
+
+            <label class="field-label">Gemini Model</label>
+
+            <select id="modelSelect" class="dropdown-select">
+                <option value="gemini-3.8-flash">Gemini 3.8 Flash</option>
+                <option value="gemini-3.7-flash">Gemini 3.7 Flash</option>
+                <option value="gemini-3.6-flash">Gemini 3.6 Flash</option>
+                <option value="gemini-3.5-flash">Gemini 3.5 Flash</option>
+                <option value="gemini-3.5-flash-lite">Gemini 3.5 Flash-Lite</option>
+                <option value="gemini-3.1-flash-lite">Gemini 3.1 Flash-Lite</option>
+                <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+            </select>
+
+            <button id="testModelBtn" class="outline-btn">
+                Test Selected Model
+            </button>
+
+            <label class="checkbox-row">
+                <input type="checkbox" id="fallbackToggle" checked>
+                <span>Automatic fallback enabled</span>
+            </label>
+
+            <div id="modelStatus" class="status-indicator">
+                Active Model: Gemini 3.8 Flash
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="content-area">
+
+        <header class="app-header">
+            <div>
+                <div class="sub-heading">AI STUDY ENGINE</div>
+                <h1 id="pageTitle">AcademiaPulse AI Studio</h1>
+            </div>
+
+            <div class="badge-status">
+                <span class="active-dot"></span>
+                System Ready
+            </div>
+        </header>
+
+        <section id="content">
+            <!-- Dynamic workspace content -->
+        </section>
+
+    </main>
+
+</div>
+
+<!-- ================= TOAST NOTIFICATION ================= -->
+
+<div id="toast" class="toast-notification"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
